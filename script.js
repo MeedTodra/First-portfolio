@@ -76,8 +76,8 @@ h_jobs.addEventListener('mouseout', ()=>{
     
 
 
-    function myFunction(x) {
-        if (x.matches) { // If media query matches
+    function show_hide_ul(width_window) {
+        if (width_window.matches) { // If media query matches
           menu_div.style.visibility = "hidden";
         } else {
           menu_div.style.visibility = "visible";
@@ -94,9 +94,9 @@ h_jobs.addEventListener('mouseout', ()=>{
         }
       }
       
-      var x = window.matchMedia("(max-width: 800px)")
-      myFunction(x) // Call listener function at run time
-      x.addListener(myFunction);
+      var width_window = window.matchMedia("(max-width: 800px)")
+      show_hide_ul(width_window) // Call listener function at run time
+      width_window.addListener(show_hide_ul);
 
 
        /* Hamburger menu click */
